@@ -24,9 +24,9 @@
         <td><%= book.genre %></td>
         <td><%= book.date_released %></td>
         <td><%= book.book_in_series %></td>
-        <td><%= button_to 'Show', book %></td>
-        <td><%= button_to 'Edit', edit_book_path(book) %></td>
-        <td><%= button_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Edit', edit_book_path(book) %></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 </section>
 <br>
 
-<%= button_to 'New Book', new_book_path %>
+<%= link_to 'New Book', new_book_path %>
