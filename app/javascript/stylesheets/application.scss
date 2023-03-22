@@ -1,1 +1,34 @@
 @import "~bootstrap/scss/bootstrap";
+
+body {
+    padding: 25px; 
+    font-family:'Roboto', sans-serif;
+ }
+ 
+ th {
+    padding-right: 10px;
+ }
+ td {
+    padding-right: 10px;
+ }
+ tbody tr:nth-child(odd){
+    background-color: #c3e5fd;
+    color: #000;
+  }
+ 
+ .myborder {
+    border: 3px solid grey;
+    // padding: 5px;
+    border-radius: 4px;
+    margin: 2px;
+ }
+ 
+//  .mycontainer {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-evenly;
+//  }
+ .mybutton {
+    border: 1px solid blue;
+    padding: 5px;
+ }
