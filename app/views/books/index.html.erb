@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Books</h1>
-<img src="cs3300webapp/app/images/books.jpg" alt="stack of books">
+<img src="cs3300webapp/app/assets/images/books.jpg" alt="stack of books">
 
 <section class="myborder">
 <table>
@@ -25,7 +25,8 @@
         <td><%= book.genre %></td>
         <td><%= book.date_released %></td>
         <td><%= book.book_in_series %></td>
-        <td><%= link_to 'Show', book %></td>
+        <td><%= link_to 'Show', book %>
+        <td><a class="btn btn-primary" href=@book:id role="button">Link</a>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
