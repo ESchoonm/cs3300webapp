@@ -3,11 +3,11 @@
 body {
     padding: 25px; 
     font-family:'Roboto', sans-serif;
-    background-color: azure;
+    background-color: lightgray;
  }
  h1{
    font-family:'Times New Roman', Times, serif;
-   color:darkcyan;
+   color: maroon;
    font-size:xxxx-large;
  }
  
@@ -15,15 +15,17 @@ body {
     padding-right: 15px;
  }
  td {
+   padding-top: 5px;
+   padding-bottom: 5px;
     padding-right: 15px;
  }
  tbody tr:nth-child(odd){
-    background-color: #c3e5fd;
+    background-color: whitesmoke;
     color: #000;
   }
  
  .myborder {
-    border: 3px solid darkcyan;
+    border: 3px solid maroon;
     // padding: 5px;
     border-radius: 4px;
     margin: 2px;
@@ -35,6 +37,14 @@ body {
 //     justify-content: space-evenly;
 //  }
  .mybutton {
-    border: 1px solid blue;
+    border: 2px solid maroon;
+    color:#000;
     padding: 5px;
  }
+ .mybutton:hover, .mybutton:focus, .mybutton:active, .mybutton.active, .open > .dropdown-toggle.mybutton {
+   background: maroon;
+}
+.mybutton:active, .mybutton.active {
+   background: maroon;
+   box-shadow: none;
+}
