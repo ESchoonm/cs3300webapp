@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Books</h1>
-<img src="cs3300webapp/app/assets/images/books.jpg" alt="stack of books">
+<img src="../../assets/images/books.jpg" alt="stack of books">
 
 <section class="myborder">
 <table>
@@ -24,10 +24,10 @@
         <td><%= book.description %></td>
         <td><%= book.genre %></td>
         <td><%= book.date_released %></td>
-        <td><%= book.book_in_series %></td>dest
-        <td><a class="btn btn-outline-primary" href="<%= book_path(book) %>" role="button">Show</a>
-        <td><a class="btn btn-outline-primary" href="<%= edit_book_path(book) %>" role="button">Edit</a>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= book.book_in_series %></td>
+        <td><a class="btn btn-outline-primary" href="<%= book_path(book) %>" role="button">Show</a></td>
+        <td><a class="btn btn-outline-primary" href="<%= edit_book_path(book) %>" role="button">Edit</a></td>
+        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-primary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -35,4 +35,4 @@
 </section>
 <br>
 
-<%= link_to 'New Book', new_book_path %>
+<a class="btn btn-outline-primary" href="<%= new_book_path %>" role="button">New Book</a>

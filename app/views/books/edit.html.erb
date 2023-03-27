@@ -2,5 +2,6 @@
 
 <%= render 'form', book: @book %>
 
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+<%= link_to 'Show', @book, class:"btn btn_outline_" %>
+<a class="btn btn-outline-primary" href="<%= books_path%>" role="button"> Back </a>
+
