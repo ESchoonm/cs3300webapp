@@ -9,6 +9,10 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "bootstrap"
 import "../stylesheets/application" /* This is your stylesheet file where you will write all the styling code.*/
+// import "../images/books"
+
+const images = require.context("../images",true)
+const imagePath = name => images(name,true)
 
 Rails.start()
 Turbolinks.start()
