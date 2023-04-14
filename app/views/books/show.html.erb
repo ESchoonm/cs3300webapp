@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
   <strong>Description:</strong>
   <%= @book.description %>
 </p>
@@ -13,6 +18,11 @@
 <p>
   <strong>Genre:</strong>
   <%= @book.genre %>
+</p>
+
+<p>
+  <strong>String:</strong>
+  <%= @book.string %>
 </p>
 
 <p>
@@ -25,5 +35,10 @@
   <%= @book.book_in_series %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) , class:"btn btn-outline-* mybutton" %>
-<%= link_to 'Back', books_path , class:"btn btn-outline-* mybutton" %>
+<p>
+  <strong>Integer:</strong>
+  <%= @book.integer %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

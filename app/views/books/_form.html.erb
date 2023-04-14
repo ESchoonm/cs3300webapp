@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+
+  <div class="field">
     <%= form.label :description %>
     <%= form.text_area :description %>
   </div>
@@ -27,13 +32,23 @@
   </div>
 
   <div class="field">
+    <%= form.label :string %>
+    <%= form.text_field :string %>
+  </div>
+
+  <div class="field">
     <%= form.label :date_released %>
-    <%= form.number_field :date_released %>
+    <%= form.date_select :date_released %>
   </div>
 
   <div class="field">
     <%= form.label :book_in_series %>
-    <%= form.number_field :book_in_series %>
+    <%= form.text_field :book_in_series %>
+  </div>
+
+  <div class="field">
+    <%= form.label :integer %>
+    <%= form.text_field :integer %>
   </div>
 
   <div class="actions">
