@@ -1,2 +1,0 @@
-class Bookrake < ApplicationRecord
-end
