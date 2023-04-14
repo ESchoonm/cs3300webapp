@@ -1,0 +1,2 @@
+class Bookrake < ApplicationRecord
+end
