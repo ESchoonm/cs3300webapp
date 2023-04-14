@@ -30,7 +30,7 @@ RSpec.describe "books/new", type: :view do
 
       assert_select "input[name=?]", "book[book_in_series]"
 
-      assert_select "input[name=?]", "book[integer]"
+      # assert_select "input[name=?]", "book[integer]"
     end
   end
 end

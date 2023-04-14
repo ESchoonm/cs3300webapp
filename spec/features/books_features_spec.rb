@@ -1,32 +1,35 @@
-# context "Login" do
-#     scenario "should sign up" do
-#       visit root_path
-#       click_link 'Sign up'
-#       within("form") do
-#         fill_in "Email", with: "testing@test.com"
-#         fill_in "Password", with: "123456"
-#         fill_in "Password confirmation", with: "123456"
-#         click_button "Sign up"
-#       end
-#       expect(page).to have_content("Welcome! You have signed up successfully.")
-#     end
-
-
-#     scenario "should log in" do
-#       user = FactoryBot.create(:user)
-#       login_as(user)
-#       visit root_path
-#       expect(page).to have_content("Logged in")
-#     end
-#   end
-
 require "rails_helper"
 
 RSpec.feature "Books", type: :feature do
+
+  context "Login" do
+    scenario "should sign up" do
+      visit root_path
+      click_link 'Sign up'
+      within("form") do
+        fill_in "Email", with: "testing@test.com"
+        fill_in "Password", with: "123456"
+        fill_in "Password confirmation", with: "123456"
+        click_button "Sign up"
+      end
+      expect(page).to have_content("Welcome! You have signed up successfully.")
+    end
+
+
+    scenario "should log in" do
+      user = FactoryBot.create(:user)
+      login_as(user)
+      visit root_path
+      expect(page).to have_content("Logged in")
+    end
+  end
+
     context "Update book" do
-      let(:book) { Book.create(title: "Test title", description: "Test content") }
+      let(:book) { Book.create(title: "Test title", description: "Test content", author:"Test author") }
       before(:each) do
-        visit edit_project_path(book)
+        user = FactoryBot.create(:user)
+        login_as(user)
+        visit edit_book_path(book)
       end
  
  
@@ -58,7 +61,9 @@ RSpec.feature "Books", type: :feature do
 
     context "Create book" do
         before(:each) do
-          visit new_project_path()
+          user = FactoryBot.create(:user)
+          login_as(user)
+          visit new_book_path()
         end
   
         #senario given the project is successfully created
@@ -66,6 +71,7 @@ RSpec.feature "Books", type: :feature do
           within("form") do
             fill_in "Title", with: "title1"
             fill_in "Description", with: "content description"
+            fill_in "Author", with: "test author"
           end
           click_button "Create Book"
           expect(page).to have_content("Book was successfully created.")
