@@ -7,9 +7,9 @@ RSpec.describe "books/show", type: :view do
       author: "Author",
       description: "MyText",
       genre: "Genre",
-      string: "String",
+      # string: "String",
       book_in_series: "Book In Series",
-      integer: "Integer"
+      # integer: "Integer"
     ))
   end
 
@@ -19,8 +19,8 @@ RSpec.describe "books/show", type: :view do
     expect(rendered).to match(/Author/)
     expect(rendered).to match(/MyText/)
     expect(rendered).to match(/Genre/)
-    expect(rendered).to match(/String/)
+    # expect(rendered).to match(/String/)
     expect(rendered).to match(/Book In Series/)
-    expect(rendered).to match(/Integer/)
+    # expect(rendered).to match(/Integer/)
   end
 end
