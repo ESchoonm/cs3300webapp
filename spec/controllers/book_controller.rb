@@ -1,5 +1,8 @@
 require 'rails_helper'
 
+
+#4 lines missing for testing
+
 # Change this ArticlesController to your project
 RSpec.describe BookController, type: :controller do
 
