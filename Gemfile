@@ -22,6 +22,12 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#jquery for rails
+gem 'jquery-rails', '~> 4.5', '>= 4.5.1'
+
+#datatables gem
+gem 'datatables', '~> 1.0'
+
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 
